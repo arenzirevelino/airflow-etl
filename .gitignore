@@ -2,12 +2,12 @@
 .env
 
 #ariflow
-airflow.cfg
-airflow.db
-/logs/
-airflow-webserver.pid
-webserver_config.py
-airflow-*.err
-airflow-*.out
-airflow-*.log
-airflow-*.pid
+airflow/airflow.cfg
+airflow/airflow.db
+airflow/logs/
+airflow/airflow-webserver.pid
+airflow/webserver_config.py
+airflow/airflow-*.err
+airflow/airflow-*.out
+airflow/airflow-*.log
+airflow/airflow-*.pid
