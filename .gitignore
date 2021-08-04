@@ -1,0 +1,13 @@
+#environments
+.env
+
+#ariflow
+airflow.cfg
+airflow.db
+/logs/
+airflow-webserver.pid
+webserver_config.py
+airflow-*.err
+airflow-*.out
+airflow-*.log
+airflow-*.pid
