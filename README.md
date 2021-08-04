@@ -1,6 +1,6 @@
 # airflow-etl on local
 
-Hi, I try to learn re-create Airflow ETL on my local.
+Hi, I try to learn re-create Airflow ETL on my local and using this repo for my documentation of learning step-by-step.
 
 ## I am using:
 1. Python 3.9
@@ -16,7 +16,22 @@ Hi, I try to learn re-create Airflow ETL on my local.
 5. Initialize airflow -> `airflow db init`. Try `airflow dags list` to see some dags example.
 6. after that, create dags directory on airflow_home directory --> `mkdir ${AIRFLOW_HOME}/dags/`
 7. setup the `.env` file to set `${AIRFLOW_HOME}/dags` as `dags_floder`, you can change into different location for `dags_floder` by change the configuration on `.env` file.
-    `echo "AIRFLOW__CORE__DAGS_FOLDER=${AIRFLOW_HOME}/dags" >> .env`
+    `echo "AIRFLOW__CORE__DAGS_FOLDER=${AIRFLOW_HOME}/dags" >> .env`.
+    so this is my folder structure:
+    ```
+    my_project
+    ├── airflow
+    │   ├── airflow.cfg
+    │   ├── airflow.db
+    |   ├── airflow-webserver.pid
+    |   ├── webserver_config.py
+    │   ├── dags
+    │   └── logs
+    │      └── scheduler 
+    ├── .env
+    ├── Pipfile
+    └── Pipfile.lock      
+    ```                  
 8. create user airflow 
     ```
     airflow users create \ 
@@ -31,3 +46,6 @@ Hi, I try to learn re-create Airflow ETL on my local.
 
 
 **This is my first time making something like this, so I apologize if there are many shortcomings**
+
+Reference:
+https://github.com/arizalsandi/etl-local-airflow
