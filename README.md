@@ -44,7 +44,7 @@ Hi, I try to learn re-create Airflow ETL on my local and using this repo for my 
     ```
 9. try to run on different terminal window `airflow webserver --port 8080` to check airflow webserver can running on your `localhost:8080`
 10. in here, I am using sample db from [Chinook DB](https://www.sqlitetutorial.net/sqlite-sample-database/) for trial extract some data from SQL result to CSV and load into a table.
-11. for testing, you can test on task level using `airflow task test [dag_id] [task_id] [execution_date]`. and for dags level using `airflow dags test [dag_id] [execution_date]`
+11. for testing, you can test on task level using `airflow tasks test [dag_id] [task_id] [execution_date]`. and for dags level using `airflow dags test [dag_id] [execution_date]`
 
 
 **This is my first time making something like this, so I apologize if there are many shortcomings**
