@@ -1,3 +1,4 @@
+import os
 import sqlite3
 import pandas as pd
 from sqlalchemy import create_engine
@@ -6,10 +7,10 @@ from airflow.operators.dummy import DummyOperator
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
 
-DATA_SOURCE = '/Users/arenzirevelino/Documents/Project/airflow-etl/sample_data/chinook.db'
-DATABASE_LOCATION = '/Users/arenzirevelino/Documents/Project/airflow-etl/sample_data/chinook_invoice_by_sales.sqlite'
-CSV_OUTPUT = '/Users/arenzirevelino/Documents/Project/airflow-etl/sample_data/chinook_invoice_csv.csv'
-SQL_QUERY = '/Users/arenzirevelino/Documents/Project/airflow-etl/sqlquery/invoice_by_sales.sql'
+DATA_SOURCE = str(os.path.abspath('../'+'airflow-etl/sample_data/chinook.db'))
+DATABASE_LOCATION = str(os.path.abspath('../'+'airflow-etl/sample_data/chinook_invoice_by_sales.sqlite'))
+CSV_OUTPUT = str(os.path.abspath('../'+'airflow-etl/sample_data/chinook_invoice_csv.csv'))
+SQL_QUERY = str(os.path.abspath('../'+'airflow-etl/sample_data/invoice_by_sales.sql'))
 
 default_args = {
 	'owner':'renzi',

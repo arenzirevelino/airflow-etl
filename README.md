@@ -5,7 +5,7 @@ Hi, I try to learn re-create Airflow ETL on my local and using this repo for my 
 ## I am using:
 1. Python 3.9
 2. Apache Airflow
-3. pipenv for virctual environment
+3. pipenv for virtual environment
 
 ## step-by-step
 1. create project directory `mkdir airflow-etl` and then go to the folder `cd airflow-etl`
