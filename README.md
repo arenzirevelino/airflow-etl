@@ -12,9 +12,10 @@ Hi, I try to learn re-create Airflow ETL on my local and using this repo for my 
 2. install the some of library using `pipenv` -> `pipenv install --python 3.9` and `pipenv install apache-airflow`
 3. after that, set home for airflow in a root of your project (specified in .env file)
   `echo "AIRFLOW_HOME=${PWD}/airflow" >> .env`
-4. running your virtual env using `pipenv shell`. If you want to run airflow webserver you have to run your virtual env first.
+4. running your virtual env using `pipenv shell`. If you want to run airflow webserver again in the next tima you have to run your virtual env first.
 5. Initialize airflow -> `airflow db init`. Try `airflow dags list` to see some dags example.
 6. after that, create dags directory on airflow_home directory --> `mkdir ${AIRFLOW_HOME}/dags/`
+    in this folder you can create some dag script.
 7. setup the `.env` file to set `${AIRFLOW_HOME}/dags` as `dags_floder`, you can change into different location for `dags_floder` by change the configuration on `.env` file.
     `echo "AIRFLOW__CORE__DAGS_FOLDER=${AIRFLOW_HOME}/dags" >> .env`.
     so this is my folder structure:
@@ -42,7 +43,8 @@ Hi, I try to learn re-create Airflow ETL on my local and using this repo for my 
     --email [your email]
     ```
 9. try to run on different terminal window `airflow webserver --port 8080` to check airflow webserver can running on your `localhost:8080`
-10. in here, I am using sample db from [Chinook DB](https://www.sqlitetutorial.net/sqlite-sample-database/) for trial extract some data from result SQL to CSV end load into a table.
+10. in here, I am using sample db from [Chinook DB](https://www.sqlitetutorial.net/sqlite-sample-database/) for trial extract some data from SQL result to CSV and load into a table.
+11. for testing, you can test on task level using `airflow task test [dag_id] [task_id] [execution_date]`. and for dags level using `airflow dags test [dag_id] [execution_date]`
 
 
 **This is my first time making something like this, so I apologize if there are many shortcomings**
